@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+
+    <!-- JUnit Rules require the rules field to have public visibility. -->
+    <!-- See http://checkstyle.sourceforge.net/config_design.html#VisibilityModifier -->
+    <suppress files=".*(?:Test|TestBase)\.java$" checks="VisibilityModifier" />
+    
+    <!-- Generated files -->
+    <suppress files=".*/src/main/java/generated/.*\.java" checks=".*" />
+    <suppress files=".*/src/main/java/.*/generated/.*\.java" checks=".*" />
+    <suppress files=".*\\src\\main\\java\\generated\\.*\.java" checks=".*" />
+    <suppress files=".*\\src\\main\\java\\.*\\generated\\.*\.java" checks=".*" />
+
+</suppressions>

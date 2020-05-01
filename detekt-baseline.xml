@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:SwitchK.kt$main</ID>
+    <ID>EmptyFunctionBlock:StudentK.kt$StudentK${ }</ID>
+    <ID>EmptySecondaryConstructor:StudentK.kt$StudentK${ }</ID>
+    <ID>MagicNumber:ExstensionK.kt$10</ID>
+    <ID>MagicNumber:ExstensionK.kt$15</ID>
+    <ID>MagicNumber:ExstensionK.kt$3</ID>
+    <ID>MagicNumber:ListK.kt$10</ID>
+    <ID>MagicNumber:ListK.kt$21</ID>
+    <ID>MagicNumber:ListK.kt$36</ID>
+    <ID>MagicNumber:ListK.kt$45</ID>
+    <ID>MagicNumber:ListK.kt$65</ID>
+    <ID>MagicNumber:NullK.kt$3121</ID>
+    <ID>MagicNumber:StudentK.kt$21</ID>
+    <ID>MagicNumber:SwitchK.kt$3</ID>
+    <ID>MagicNumber:SwitchK.kt$4</ID>
+    <ID>MagicNumber:SwitchK.kt$5</ID>
+    <ID>MagicNumber:SwitchK.kt$6</ID>
+    <ID>MagicNumber:SwitchK.kt$7</ID>
+    <ID>MatchingDeclarationName:CounterK.kt$Counter</ID>
+    <ID>MatchingDeclarationName:ListK.kt$PersonK</ID>
+    <ID>UtilityClassWithPublicConstructor:UtilK.kt$UtilK</ID>
+  </Whitelist>
+</SmellBaseline>

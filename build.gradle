@@ -1,0 +1,60 @@
+buildscript {
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jmailen.gradle:kotlinter-gradle:$kotlinterPluginVersion"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektPluginVersion"
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'org.jmailen.kotlinter'
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+//apply plugin: 'checkstyle'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+}
+
+//checkstyle {
+//    toolVersion = "6.0"
+//}
+
+ detekt {
+     version = "$detektPluginVersion"
+     baseline = file("$projectDir/detekt-baseline.xml")
+
+     reports {
+         xml {
+             enabled = true
+             destination = file("build/reports/detekt.xml")
+         }
+         html {
+             enabled = true
+             destination = file("build/reports/detekt.html")
+         }
+    }
+ }
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
