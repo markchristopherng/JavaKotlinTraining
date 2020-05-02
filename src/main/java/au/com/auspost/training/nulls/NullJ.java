@@ -6,34 +6,34 @@ import java.util.Optional;
 
 public class NullJ {
 
-    static class Address {
+    static class AddressJ {
         public String line1;
         public String line2;
         public String suburb;
         public Integer postcode;
     }
 
-    static class Person {
+    static class PersonJ {
         public String firstname;
         public String lastName;
-        public Address homeAddress;
-        public Optional<Address> workAddress = Optional.empty();
+        public AddressJ homeAddressJ;
+        public Optional<AddressJ> workAddress = Optional.empty();
     }
 
     public static void main(String args[]) {
 
         //Data
-        Address home = new Address();
+        AddressJ home = new AddressJ();
         home.line1 = "1 madeup St";
         home.suburb = "Richmond";
         home.postcode = 3121;
-        Optional<Address> optionalAddress = Optional.of(home);
+        Optional<AddressJ> optionalAddress = Optional.of(home);
 
-        Person person = new Person();
-        person.firstname = "mark";
-        person.lastName = "ng";
-        person.homeAddress = home;
-        Optional<Person> optionalPerson = Optional.of(person);
+        PersonJ personJ = new PersonJ();
+        personJ.firstname = "mark";
+        personJ.lastName = "ng";
+        personJ.homeAddressJ = home;
+        Optional<PersonJ> optionalPerson = Optional.of(personJ);
 
         //1. Check for null
         if (optionalPerson.isPresent() && optionalPerson.get().workAddress.isPresent()) {
